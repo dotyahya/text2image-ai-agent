@@ -175,3 +175,7 @@ cython_debug/
 
 # Models
 models/*
+
+# gRPC generated files
+*_pb2.py
+*_pb2_grpc.py
