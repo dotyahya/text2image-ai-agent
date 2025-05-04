@@ -1,0 +1,9 @@
+torch==2.7.0
+diffusers==0.33.1
+transformers==4.51.3
+accelerate==1.6.0
+grpcio==1.71.0
+grpcio-tools==1.71.0
+pytest==8.3.5
+locust==2.36.2
+gradio==5.29.0
