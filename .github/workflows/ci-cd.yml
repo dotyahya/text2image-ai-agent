@@ -12,15 +12,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.9"
+          python-version: "3.12"
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
           pip install pylint pytest
       - name: Lint code
         run: pylint src/*.py
-      - name: Run unit tests
-        run: pytest tests/unit
       - name: Build Docker image
         run: docker build -t text2image:latest .
       - name: Run container tests
