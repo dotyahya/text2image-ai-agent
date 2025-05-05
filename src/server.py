@@ -6,7 +6,6 @@ import text2image_pb2_grpc
 from diffusers import StableDiffusionPipeline
 import torch
 import io
-import signal
 
 from datetime import datetime
 
@@ -17,7 +16,7 @@ class Text2ImageServicer(text2image_pb2_grpc.Text2ImageServicer):
             safety_checker=None,
             torch_dtype=torch.float32,  # CPU-compatible
             local_files_only=True,      # no online API calls, fetch from ./models
-            cache_dir="./models"
+            cache_dir="/app/models"     # set to ./models to run w/o Docker
         )
         self.model = self.model.to("cpu")
         self.model.enable_attention_slicing()  # CPU memory optimization

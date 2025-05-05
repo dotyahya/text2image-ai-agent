@@ -1,0 +1,18 @@
+# Ignore model weights to avoid copying into the Docker image
+.models/
+
+# Ignore Python cache and virtual environment
+__pycache__/
+*.pyc
+.venv/
+
+# Ignore other unnecessary files
+*.egg-info/
+.git/
+.gitignore
+
+# gRPC generated files
+*_pb2.py
+*_pb2_grpc.py
+
+./src/download_model.py
