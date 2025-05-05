@@ -1,0 +1,7 @@
+services:
+  text2image:
+    build: .
+    ports:
+      - "50051:50051"
+    volumes:
+      - ./models:/app/models
